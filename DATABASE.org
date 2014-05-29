@@ -1,0 +1,58 @@
+* Database
+
+** Tables
+
+*** User
+
+    | Column      | Type     | Constraints      |
+    |-------------+----------+------------------|
+    | username    | string   | required, unique |
+    | password    | password | required         |
+    | email       | string   |                  |
+    | photo       | Image    |                  |
+    | preferences |          |                  |
+
+*** Preference
+
+    | Column         | Type    | Constraints |
+    |----------------+---------+-------------|
+    | hidden_columns | string  |             |
+    | private        | boolean |             |
+
+*** Housing
+
+    | Column            | Type    | Constraints |
+    |-------------------+---------+-------------|
+    | description       | string  | required    |
+    | town              | string  | required    |
+    | price             | double  | required    |
+    | caution           | double  |             |
+    | maintenance_fee   | double  |             |
+    | surface           | integer |             |
+    | num_bedroom       | integer |             |
+    | num_restroom      | integer |             |
+    | num_living_room   | integer |             |
+    | num_dining_room   | integer |             |
+    | balcony           | integer |             |
+    | num_car_park_slot | integer |             |
+    | elevator          | boolean |             |
+    | floor             | integer |             |
+    | kitchen           | boolean |             |
+    | address           | string  |             |
+    | offer_url         | string  |             |
+    | images            | Images  |             |
+    | reviews           | Reviews |             |
+
+*** Review
+
+    | Column   | Type    |
+    |----------+---------|
+    | reviewer | string  |
+    | rating   | integer |
+    | comment  | string  |
+
+*** Image
+
+    | Column | Type   |
+    |--------+--------|
+    | url    | string |
